@@ -1,0 +1,50 @@
+.bg-darkblue {
+    background-color: rgb(70, 130, 180);
+}
+
+.text-darkblue {
+    color: rgb(70, 130, 180);
+}
+
+.text-newpink {
+    color: rgb(255, 0, 216);
+}
+
+.text-lightgray {
+    color: rgb(160, 160, 160)
+}
+
+.text-unvisited:link {
+    color: rgb(255, 0, 216);
+}
+
+.text-visited:visited {
+    color: orange;
+}
+
+.text-hovered:hover {
+    color: magenta;
+}
+
+.text-active:active {
+    color: lime;
+}
+
+
+.ministries {
+    font-weight: lighter;
+    font-size: 97px;
+}
+
+.banner-fixed {
+    width: 200px;
+    height: 200px;
+}
+
+.inside {
+    list-style-position: inside;
+}
+
+.hover-darkerblue:hover {
+    background-color: rgb(0, 0, 139) ;
+}

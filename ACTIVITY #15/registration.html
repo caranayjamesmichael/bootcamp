@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISCP Employee Registration Form</title>
+
+    <style>
+        label, input {
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        label {
+            width: 155px;
+        }
+
+        textarea {
+            width: 300px;
+            height: 200px;
+        }
+
+        #fullAddress {
+            width: 320px;
+        }
+
+        #symptomLabel {
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <h1>ISCP Employee Registration Form</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/ISCP_Logo.png" alt="ISCP Logo" width="200px" height="200px">
+        <br>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/aCUhfPAyDHY" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+        <br>
+
+        <h2>Basic Information</h2>
+        <label for="firstName">First name:</label>
+        <input type="text" name="firstName" id="firstName" placeholder="ex. James">
+        <br>
+
+        <label for="lastName">Last name:</label>
+        <input type="text" name="lastName" id="lastName" placeholder="ex. Caranay">
+        <br>
+
+        <label for="placeOfBirth">Place of birth:</label>
+        <input type="text" name="placeOfBirth" id="placeOfBirth" placeholder="ex. Antipolo Rizal">
+        <br>
+
+        <label for="birthDate">Birthdate:</label>
+        <input type="date" name="birthDate" id="birthDate">
+        <br>
+
+        <label for="civilStatus">Civil Status:</label>
+        <select name="civilStatus" id="civilStatus">
+            <option value="single">Single</option>
+            <option value="married">Married</option>
+            <option value="widowed">Widowed</option>
+            <option value="separated">Separated</option>
+        </select>
+        <br>
+
+        <label for="gender">Gender:</label>
+        <select name="gender" id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <br>
+
+        <label for=" mothersMaidenName">Mother's maiden name:</label>
+        <input type="text" name="mothersMaidenName" id="mothersMaidenName" placeholder="ex. Caranay">
+        <br>
+
+        <label for="fathersName">Father's name:</label>
+        <input type="text" name="fathersName" id="fathersName" placeholder="ex. Caranay">
+
+        <h2>Contact information</h2>
+
+        <label for="emailAddress">Email address:</label>
+        <input type="email" name="emailAddress" id="emailAddress" placeholder="ex. iamexample@gmail.com">
+        <br>
+
+        <label for="contactNumber">Contact #:</label>
+        <input type="text" name="contactNumber" id="contactNumber" placeholder="ex. 09164319751">
+        <br>
+
+        <label for="telephoneNumber">Telephone #:</label>
+        <input type="text" name="telephoneNumber" id="telephoneNumber" placeholder="ex. 02-8123-4567">
+        <br>
+
+        <h2>Address</h2>
+
+        <label for="streetNumber">Street #:</label>
+        <input type="text" name="streetNumber" id="streetNumber" placeholder="ex. 2342" oninput="sendAddress()">
+        <br>
+
+        <label for="streetName">Street name:</label>
+        <input type="text" name="streetName" id="streetName" placeholder="ex. Orlando St.">
+        <br>
+
+        <label for="barangay">Barangay:</label>
+        <input type="text" name="barangay" id="barangay" placeholder="ex. Manggahan">
+        <br>
+
+        <label for="city">City/Town:</label>
+        <input type="text" name="city" id="city" placeholder="ex. Pasig">
+        <br>
+
+        <label for="province">Province:</label>
+        <select name="province" id="province">
+        <option value="Metro Manila">Metro Manila</option>
+        <option value="Calabarzon">Calabarzon</option>
+        </select>
+        <br>
+
+        <label for="fullAddress"">Full address:</label>
+        <input type=" text" name="fullAddress" id="fullAddress" readonly>
+
+        <h2>Government information</h2>
+
+        <label for="sss">SSS ID:</label>
+        <input type="file" name="sss" id="sss">
+        <br>
+
+        <label for="pagibig">Pag-Ibig ID:</label>
+        <input type="file" name="pagibig" id="pagibig">
+        <br>
+
+
+        <label for="philhealth">PhilHealth ID:</label>
+        <input type="file" name="philhealth" id="philhealth">
+        <br>
+
+
+        <label for="twobytwopic">2X2 Picture:</label>
+        <input type="file" name="twobytwopic" id="twobytwopic">
+        <br>
+
+
+        <label for="governmentID">Government ID:</label>
+        <input type="file" name="governmentID" id="governmentID">
+        <br>
+
+        <h2>Account information</h2>
+
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" placeholder="ex. caranayjames">
+        <br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" placeholder="atleast 8 characters">
+        <br>
+
+        <label for="confirmPassword">Confirm password:</label>
+        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="confirm password here">
+        <br>
+
+        <label for="profilePicture">Profile picture:</label>
+        <input type="file" name="profilePicture" id="profilePicture">
+        <br>
+
+        <h2>Have you experience any of the following in the last 30 days?</h2>
+
+        <input type="checkbox" name="coughing" value="coughing">
+        <label for="coughing">Coughing</label>
+        <br>
+
+        <input type="checkbox" name="fever" value="fever">
+        <label for="fever">Fever</label>
+        <br>
+
+        <input type="checkbox" name="headache" value="headache">
+        <label for="headache">Headache</label>
+        <br>
+
+        <input type="checkbox" name="bodyAche" value="bodyAche">
+        <label for="bodyAche">Body Ache</label>
+        <br>
+
+        <input type="checkbox" name="soreThroat" value="soreThroat">
+        <label for="soreThroat">Sore Throat</label>
+        <br>
+
+        <input type="checkbox" name="Tiredness" value="Tiredness">
+        <label for="Tiredness">Tiredness</label>
+        <br>
+
+        <input type="checkbox" name="lossOfSmell" value="lossOfSmell">
+        <label for="lossOfSmell">Cold</label>
+        <br>
+
+        <input type="checkbox" name="cold" value="cold">
+        <label for="cold">Loss of smell</label>
+        <br>
+
+        <h2>Give a short description about yourself</h2>
+        <textarea name="selfDescription" id="selfDescription" placeholder="Place your description here"></textarea>
+        <br>
+
+        <input type="submit" value="SUBMIT FORM">
+    </form>
+
+    <script>
+        streetNumber.oninput = showValue;
+        streetName.oninput = showValue;
+        barangay.oninput = showValue;
+        city.oninput = showValue;
+        province.oninput = showValue;
+
+        function showValue() {
+            fullAddress.value = streetNumber.value + " " + streetName.value + ", " + barangay.value + " " + city.value + ", " + province.value;
+        }
+    </script>
+</body>
+
+</html>
